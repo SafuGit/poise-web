@@ -6,8 +6,13 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 z-50 w-full bg-[#131313]/40 backdrop-blur-2xl glassmorphism-edge">
       <nav className="mx-auto flex w-full max-w-360 items-center justify-between px-6 py-5 md:px-12 md:py-8">
-        <div className="font-['Space_Grotesk'] text-2xl font-medium tracking-tighter text-white">
-          Poise
+        <div className='flex gap-2 items-center justify-center'>
+          <div>
+            <img src="/icon.png" className='w-8 rounded-lg' alt="" />
+          </div>
+          <div className="font-['Space_Grotesk'] text-2xl font-medium tracking-tighter text-white">
+            Poise
+          </div>
         </div>
 
         <div className="hidden items-center gap-12 font-['Space_Grotesk'] font-medium tracking-[-0.02em] md:flex">
