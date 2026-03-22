@@ -2,6 +2,7 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Steps from './components/Steps';
 import Grid from './components/Grid';
+import Quote from './components/Quote';
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Hero />
         <Steps />
         <Grid />
+        <Quote />
       </main>
     </div>
   );
