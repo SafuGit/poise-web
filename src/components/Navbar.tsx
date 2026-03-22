@@ -38,9 +38,9 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <button className="pulse-gradient rounded-full px-8 py-3 font-medium text-on-primary-fixed transition-all hover:opacity-90 active:scale-95">
+          <a className="pulse-gradient rounded-full px-8 py-3 font-medium text-on-primary-fixed transition-all hover:opacity-90 active:scale-95" href='#downloads'>
             Download Now
-          </button>
+          </a>
         </div>
 
         <button
@@ -75,9 +75,9 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <button className="pulse-gradient mt-2 rounded-full px-8 py-3 font-medium text-on-primary-fixed transition-all hover:opacity-90 active:scale-95">
+            <a className="pulse-gradient mt-2 rounded-full px-8 py-3 font-medium text-on-primary-fixed transition-all hover:opacity-90 active:scale-95" href='#downloads'>
               Download Now
-            </button>
+            </a>
           </div>
         </div>
       )}

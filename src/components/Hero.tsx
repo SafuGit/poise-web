@@ -37,9 +37,9 @@ const Hero = () => {
 
 				{/* CTA Buttons */}
 				<div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-					<button className="pulse-gradient neon-glow rounded-full px-10 py-5 text-lg font-semibold text-on-primary-fixed transition-all duration-300 hover:brightness-110 active:scale-95">
+					<a href="#downloads" className="pulse-gradient neon-glow rounded-full px-10 py-5 text-lg font-semibold text-on-primary-fixed transition-all duration-300 hover:brightness-110 active:scale-95">
 						Download Now
-					</button>
+					</a>
 					<button className="rounded-full border border-white/10 bg-surface-container-highest/20 px-10 py-5 text-lg font-medium text-white transition-all duration-300 hover:bg-surface-container-highest/40">
 						View Source
 					</button>
