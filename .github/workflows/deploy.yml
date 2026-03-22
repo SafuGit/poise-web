@@ -24,12 +24,10 @@ jobs:
       - name: Build project
         run: npm run build   # adjust if needed
 
-      - name: Install Surge
-        run: npm install -g surge
-
-      - name: Deploy to Surge
-        run: |
-          surge ./dist poise.surge.sh
+      - name: deploying to surge
+        uses: mahmoudgalalz/surge-action@v0.1.6
+        with:
+          domain: 'poise.surge.sh'
+          path: './dist'
         env:
-          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
