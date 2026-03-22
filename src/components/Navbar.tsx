@@ -3,6 +3,12 @@ import { useState } from 'react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks = [
+    { label: 'Home', href: '#home' },
+    { label: 'Features', href: '#features' },
+    { label: 'Github', href: 'https://github.com/chabandou/poise-voice-isolator' },
+  ];
+
   return (
     <header className="fixed top-0 z-50 w-full bg-[#131313]/40 backdrop-blur-2xl glassmorphism-edge">
       <nav className="mx-auto flex w-full max-w-360 items-center justify-between px-6 py-5 md:px-12 md:py-8">
@@ -16,24 +22,19 @@ const Navbar = () => {
         </div>
 
         <div className="hidden items-center gap-12 font-['Space_Grotesk'] font-medium tracking-[-0.02em] md:flex">
-          <a className="border-b border-[#00FBFB]/50 pb-1 font-medium text-white" href="#">
-            Home
-          </a>
-          <a
-            className="text-[#B9CAC9] transition-all duration-300 hover:text-white hover:opacity-80"
-            href="#features"
-          >
-            Features
-          </a>
-          <a
-            className="text-[#B9CAC9] transition-all duration-300 hover:text-white hover:opacity-80"
-            href="#how-it-works"
-          >
-            How it Works
-          </a>
-          <a className="text-[#B9CAC9] transition-all duration-300 hover:text-white hover:opacity-80" href="#">
-            GitHub
-          </a>
+          {navLinks.map((link, index) => (
+            <a
+              key={link.label}
+              className={`transition-all duration-300 ${
+                index === 0
+                  ? 'border-b border-[#00FBFB]/50 pb-1 font-medium text-white'
+                  : 'text-[#B9CAC9] hover:text-white hover:opacity-80'
+              }`}
+              href={link.href}
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
 
         <div className="hidden md:block">
@@ -60,34 +61,20 @@ const Navbar = () => {
           id="mobile-nav"
         >
           <div className="flex flex-col gap-4 font-['Space_Grotesk']">
-            <a
-              className="border-b border-[#00FBFB]/50 pb-1 font-medium text-white"
-              href="#"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </a>
-            <a
-              className="text-[#B9CAC9] transition-all duration-300 hover:text-white hover:opacity-80"
-              href="#features"
-              onClick={() => setIsOpen(false)}
-            >
-              Features
-            </a>
-            <a
-              className="text-[#B9CAC9] transition-all duration-300 hover:text-white hover:opacity-80"
-              href="#how-it-works"
-              onClick={() => setIsOpen(false)}
-            >
-              How it Works
-            </a>
-            <a
-              className="text-[#B9CAC9] transition-all duration-300 hover:text-white hover:opacity-80"
-              href="#"
-              onClick={() => setIsOpen(false)}
-            >
-              GitHub
-            </a>
+            {navLinks.map((link, index) => (
+              <a
+                key={link.label}
+                className={`transition-all duration-300 ${
+                  index === 0
+                    ? 'border-b border-[#00FBFB]/50 pb-1 font-medium text-white'
+                    : 'text-[#B9CAC9] hover:text-white hover:opacity-80'
+                }`}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
             <button className="pulse-gradient mt-2 rounded-full px-8 py-3 font-medium text-on-primary-fixed transition-all hover:opacity-90 active:scale-95">
               Download Now
             </button>

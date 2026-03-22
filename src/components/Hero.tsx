@@ -1,6 +1,6 @@
 const Hero = () => {
 	return (
-		<section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pb-50 pt-50">
+		<section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pb-50 pt-50" id="home">
 			{/* Background Waveform Visual */}
 			<div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center opacity-20">
 				<div className="waveform-container flex w-full items-center justify-center gap-1 h-75">
