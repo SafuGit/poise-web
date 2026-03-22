@@ -1,5 +1,6 @@
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
+import Steps from './components/Steps';
 
 export default function App() {
   return (
@@ -7,6 +8,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Steps />
       </main>
     </div>
   );
