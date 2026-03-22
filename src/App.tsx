@@ -4,6 +4,7 @@ import Steps from './components/Steps';
 import Grid from './components/Grid';
 import Quote from './components/Quote';
 import Transparency from './components/Transparency';
+import FinalCTA from './components/FinalCTA';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Grid />
         <Quote />
         <Transparency />
+        <FinalCTA />
       </main>
     </div>
   );
