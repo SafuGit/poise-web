@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Steps from './components/Steps';
 import Grid from './components/Grid';
 import Quote from './components/Quote';
+import Transparency from './components/Transparency';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Steps />
         <Grid />
         <Quote />
+        <Transparency />
       </main>
     </div>
   );
