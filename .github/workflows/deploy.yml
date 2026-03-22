@@ -1,0 +1,35 @@
+name: Deploy to Surge
+
+on:
+  push:
+    branches:
+      - main   # runs on every commit to main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build   # adjust if needed
+
+      - name: Install Surge
+        run: npm install -g surge
+
+      - name: Deploy to Surge
+        run: |
+          surge ./dist poise.surge.sh
+        env:
+          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
